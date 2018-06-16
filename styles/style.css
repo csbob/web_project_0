@@ -3,29 +3,71 @@
 body, html {
     height: 100%;
     margin: 0;
+
+}
+
+::-webkit-scrollbar { 
+    display: none; 
 }
 
 h1 {
     font-size: 50px;
+    line-height: 5px;
 }
 
-.banner {
-  /*width: 100%;*/
+section {
   height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;    /* <----- THE SECRET ---- */
+
   background-image:  url(../images/back.jpg);
   background-color: #1c3240;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
 
+canvas {
+  width: 80%;
+  height: 80%;
+  background: #0f233c;
+  display: block;
+  margin: 0 auto;
+  cursor: none;
+  border: solid 1px;
+  border-color: #3c5d18;
+}
+
+/*section div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /*font-size: 8vw;*/
+}*/
+
+.container_main {
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .banner_text {
   font-family: 'Open Sans', sans-serif;
   color: white;
-  top:50%;
-  transform:translateY(-50%);
-  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   width: 100%;
   text-align: center;
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
